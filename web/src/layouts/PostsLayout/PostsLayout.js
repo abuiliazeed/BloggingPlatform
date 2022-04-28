@@ -6,6 +6,19 @@ const PostsLayout = ({ children }) => {
     <div className="rw-scaffold">
       <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
       <header className="rw-header">
+      <nav>
+          <ul>
+            <li>
+              <Link to={routes.home()}>Home</Link>
+            </li>
+            <li>
+              <Link to={routes.about()}>About</Link>
+            </li>
+            <li>
+              <Link to={routes.contact()}>Contact</Link>
+            </li>
+          </ul>
+        </nav>
         <h1 className="rw-heading rw-heading-primary">
           <Link to={routes.posts()} className="rw-link">
             Posts
