@@ -15,6 +15,7 @@ const BlogLayout = ({ children }) => {
         </h1>
         {isAuthenticated ? (
             <div>
+              <Link to={routes.posts()}>Posts</Link>
               <span>Logged in as {currentUser.email}</span>{' '}
               <button type="button" onClick={logOut}>
                 Logout
