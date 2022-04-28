@@ -1,9 +1,14 @@
-const Article = () => {
+import { Link,routes } from "@redwoodjs/router"
+
+const Article = ({article}) => {
   return (
-    <div>
-      <h2>{'Article'}</h2>
-      <p>{'Find me in ./web/src/components/Article/Article.js'}</p>
-    </div>
+    <article key={article.id}>
+      <header>
+        <h2><Link to={routes.article({id:article.id})}>{article.title}</Link></h2>
+      </header>
+      <div>{article.body}</div>
+      <div>Posted at: {article.createdAt}</div>
+    </article>
   )
 }
 

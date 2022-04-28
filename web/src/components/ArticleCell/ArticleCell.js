@@ -1,3 +1,4 @@
+import Article from 'src/components/Article'
 export const QUERY = gql`
   query FindArticleQuery($id: Int!) {
     article: post(id: $id) {
@@ -19,12 +20,6 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ article }) => {
   return (
-    <article key={article.id}>
-      <header>
-        <h2>{article.title}</h2>
-      </header>
-      <div>{article.body}</div>
-      <div>Posted at: {article.createdAt}</div>
-    </article>
+    <Article key={article.id} article={article}/>
   )
 }
