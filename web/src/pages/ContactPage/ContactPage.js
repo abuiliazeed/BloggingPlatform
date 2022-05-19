@@ -38,12 +38,12 @@ const ContactPage = () => {
     <>
       <MetaTags title="Contact" description="Contact page" />
       <Toaster />
-      <Form onSubmit={onSubmit} formMethods={formMethods} erroe={error}>
+      <Form className='flex flex-col  items-left' onSubmit={onSubmit} formMethods={formMethods} erroe={error}>
         <FormError error={error} wrapperClassName="form-error" />
         <Label name="name" errorClassName="error">
           Name
         </Label>
-        <TextField
+        <TextField className='bg-gray-100  rounded-sm'
           name="name"
           errorClassName="error"
           validation={{ required: true }}
@@ -53,7 +53,7 @@ const ContactPage = () => {
         <Label name="email" errorClassName="error">
           Email
         </Label>
-        <TextField
+        <TextField className='bg-gray-100  rounded-sm'
           name="email"
           errorClassName="error"
           validation={{
@@ -66,14 +66,14 @@ const ContactPage = () => {
         <Label name="message" errorClassName="error">
           Message
         </Label>
-        <TextAreaField
+        <TextAreaField className='bg-gray-100  rounded-sm'
           name="message"
           errorClassName="error"
           validation={{ required: true }}
         />
         <FieldError name="message" className="error" />
 
-        <Submit>Send Message</Submit>
+        <Submit className='bg-blue-200 py-2 px-2 rounded-lg m-1'>Send Message</Submit>
       </Form>
     </>
   )
