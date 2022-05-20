@@ -17,6 +17,14 @@ const BlogLayout = ({ children }) => {
         </h1>
         <nav>
           <ul className="relative flex items-center font-light">
+          <li>
+              <Link
+                className="py-2 px-4 hover:bg-blue-600 transition duration-100 rounded"
+                to={routes.weather()}
+              >
+                weather
+              </Link>
+            </li>
             <li>
               <Link
                 className="py-2 px-4 hover:bg-blue-600 transition duration-100 rounded"
